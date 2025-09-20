@@ -10,12 +10,15 @@ public class ArrayTasks {
         }
         System.out.println();
 
-        // 【課題1-2】11〜15の配列を表示
+        // 【課題1-2】11〜15の配列を合計して表示
         int[] arr2 = {11, 12, 13, 14, 15};
+        int sum2 = 0;
         System.out.println("【課題1-2】11〜15の整数を表示");
         for (int i = 0; i < arr2.length; i++) {
             System.out.println("arr2[" + i + "] = " + arr2[i]);
+            sum2 += arr2[i];
         }
+        System.out.println("合計: " + sum2);
         System.out.println();
 
         // 【課題1-3】配列の合計を計算して表示（55, 60, 70, 82）
@@ -40,14 +43,18 @@ public class ArrayTasks {
         }
         System.out.println();
 
-        // 【課題1-5】合計が閾値100を超えるか判定
-        int threshold = 100;
-        int sum4 = 0;
-        for (int i = 0; i < arr4.length; i++) {
-            sum4 += arr4[i];
+        // 【課題1-5】新しい配列を使って閾値判定
+        int[] arr5 = {40, 30, 20, 25}; // 合計115で100超え
+        int sum5 = 0;
+        System.out.println("【課題1-5】配列の要素と合計を表示");
+        for (int i = 0; i < arr5.length; i++) {
+            System.out.println("arr5[" + i + "] = " + arr5[i]);
+            sum5 += arr5[i];
         }
-        System.out.println("【課題1-5】合計: " + sum4);
-        if (sum4 > threshold) {
+        System.out.println("合計: " + sum5);
+
+        int threshold = 100;
+        if (sum5 > threshold) {
             System.out.println("閾値を超えました");
         } else {
             System.out.println("閾値内です");
@@ -56,8 +63,8 @@ public class ArrayTasks {
 
         // 【課題2】9×9の九九の表を2次元配列に代入して表示
         int[][] multiplicationTable = new int[9][9];
-        for (int i = 0; i < 9; i++) {         // 行
-            for (int j = 0; j < 9; j++) {     // 列
+        for (int i = 0; i < 9; i++) {         
+            for (int j = 0; j < 9; j++) {     
                 multiplicationTable[i][j] = (i + 1) * (j + 1);
             }
         }
@@ -70,4 +77,3 @@ public class ArrayTasks {
         }
     }
 }
-
